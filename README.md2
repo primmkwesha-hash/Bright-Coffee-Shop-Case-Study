@@ -1,2 +1,29 @@
 This project analyzes the Bright Coffee Shop sales dataset, which contains daily transaction data from a coffe shop. The business appointed a new CEO to grow revenue and improve product perfomance.
+As a junior analyst, l was assigned to extract actionable insights from historical data and prepare a presentation to support the CEO's decision- making.
+
+The main objectives of this analysis are: Identify which products generate the most revenue, determine the best- performing times of the day, Analyze sales trends across products and time intervals and provides recomendations to improve overall sales performance.
+
+Methodology
+The analysis was conducted in the following steps:
+Data cleaning
+Removing duplicates
+Handled missing values
+
+Data Analysis: Queried data using SQL to extract key metrics and aggregated sales by product, time and category
+
+Data visualization: createed pivot tables and charts in Excel 
+
+Key Insights 
+Certain products contribute the highest share of revenue
+Peak sales occur during specific hours of the day, Some product categories perform consistently better than others and sales patterns vary across different time intervals
+
+Summary
+This project successfully analyzed coffee shop sales data to uncover trends in product performance. The insights generated can help the business to increase revenue.
+
+Tools 
+Miro
+Canva
+Databricks
+Microsoft Excel
+PowerBI
 
