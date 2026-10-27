@@ -61,6 +61,10 @@ Select unit_price,
 From `workspace`.`browns`.`bright_coffee_shop`;
 
 
+-- Calculation 1: unit_price fix 3,1 -> 3.1 (already fixed during CSV import, stored as DOUBLE)
+-- Calculation 2: total_amount = unit_price * transaction_qty (Revenue)
+-- Calculation 3: transaction_time_bucket = 30-min intervals (for peak analysis)
+
 --Applying multiple functions to generate a polished dataset
 Select *,
 --Adding columns to enhance the table for better insights
@@ -88,9 +92,7 @@ Case
       When (unit_price * transaction_qty) Between 51 And 200 Then '02.Medium Spend'
       When (unit_price * transaction_qty) Between 201 And 300 Then '03.Moreki'
       Else '04.Blesser'
-      End As Spend_buckets,
---Revenue
-      unit_price * transaction_qty As Revenue
+      End As Spend_buckets
 From `workspace`.`browns`.`bright_coffee_shop`;
 
 
