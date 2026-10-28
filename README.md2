@@ -1,29 +1,60 @@
-This project analyzes the Bright Coffee Shop sales dataset, which contains daily transaction data from a coffe shop. The business appointed a new CEO to grow revenue and improve product perfomance.
-As a junior analyst, l was assigned to extract actionable insights from historical data and prepare a presentation to support the CEO's decision- making.
+# Bright Coffee Shop Case Study
 
-The main objectives of this analysis are: Identify which products generate the most revenue, determine the best- performing times of the day, Analyze sales trends across products and time intervals and provides recomendations to improve overall sales performance.
+### About the project
+This project is about the Bright Coffee Shop sales data. The shop has daily transaction data but the business was struggling with sales. They appointed a new CEO who wants to grow revenue and improve product performance.
 
-Methodology
-The analysis was conducted in the following steps:
-Data cleaning
-Removing duplicates
-Handled missing values
+As a junior analyst I was asked to look at the historical data and find insights that can help the CEO make better decisions. I had to clean the data, analyze it and build a presentation.
 
-Data Analysis: Queried data using SQL to extract key metrics and aggregated sales by product, time and category
+### Problem Statement
+The main problem was the data was not ready for analysis. The price column had 3,1 instead of 3.1, there was no total amount/revenue column, and we could not see peak hours. Without fixing this, the CEO cannot know which products make money or when to add more staff.
 
-Data visualization: createed pivot tables and charts in Excel 
+### Aim of the project
+The aim was to clean and analyze the sales data to support the new CEO.
 
-Key Insights 
-Certain products contribute the highest share of revenue
-Peak sales occur during specific hours of the day, Some product categories perform consistently better than others and sales patterns vary across different time intervals
+Objectives were:
+- Find which products make the most revenue
+- Find best performing times of the day
+- Check sales trends by product and time
+- Give recommendations to improve sales
 
-Summary
-This project successfully analyzed coffee shop sales data to uncover trends in product performance. The insights generated can help the business to increase revenue.
+### How I did it (Steps)
+First I planned the project with a Gantt chart. I broke it into 4 weeks - from getting data, cleaning, analysis, to dashboard.
 
-Tools 
-Miro
-Canva
-Databricks
-Microsoft Excel
-Powerpoint
+Then I did data cleaning in Databricks:
+- I removed duplicates and checked for missing values in unit_price, transaction_qty and transaction_date
+- I fixed the price issue from 3,1 to 3.1 using REPLACE and CAST to double
+- I created total_amount = unit_price * transaction_qty for revenue
+- I added day name and month name from transaction_date
+- I created day classification (Weekend vs Weekday) and time classification (Rush hour, Mid Morning etc)
+- I also did a 30-min time bucket to find peak times as required in the brief
+
+For analysis I wrote SQL queries in Databricks (Query 1 to 11):
+- Checked min and max dates, checked store locations (Lower Manhattan, Astoria, Hell's Kitchen)
+- Checked different products and product categories
+- Checked lowest and highest prices and daily transactions
+- Then I made one long polished query with all the new columns for Excel
+
+Lastly I did visualization in Excel. I made pivot tables and charts for revenue by product, sales by time and category. I used Canva for the final CEO presentation.
+
+### Key Findings / Summary of Results
+After cleaning, the data made more sense:
+
+- Some products make more money than others. Coffee and Brewed Chai were top in revenue.
+- Peak sales happen in the morning 8-9am and afternoon 4-6pm. Those rush hours are busy.
+- Coffee category performs better than other categories.
+- Sales change a lot depending on time of day. There is a slump after lunch.
+- I also grouped customers into Low, Medium and High spend.
+
+Overall the project helped to turn raw data into insights the CEO can use to increase revenue, like focusing promos during slow hours and staffing more people during rush.
+
+### Tools I Used
+- Databricks 
+- Miro 
+- Excel 
+- Canva 
+- GitHub
+- PowerPoint
+
+
+
 
